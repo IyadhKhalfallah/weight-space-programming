@@ -3,7 +3,7 @@ title: I tried "weight-space programming" on 6 kinds of models. Here's where it 
 published: false
 description: An AI wrote a rain forecaster with zero training labels, tested on weather after its knowledge cutoff. Plus fixing models by editing weights, and where it fails.
 tags: machinelearning, ai, python, xgboost
-cover_image: img/1_rain_hero.png
+cover_image: https://raw.githubusercontent.com/IyadhKhalfallah/weight-space-programming/main/article/img/1_rain_hero.png
 ---
 
 A few days ago, MIT CSAIL researchers published [Sparks of Weight-Space Programming](https://rikiyat.github.io/blog/weight-space-programming/): a frontier model that reads a neural network's weights and edits them directly, with no gradient descent, to change its behavior.
@@ -35,7 +35,7 @@ The AI wrote the model as a small program of decision trees, each with a reason 
 
 The only data it was allowed to look at was **unlabelled**: feature percentiles, so "low pressure" can be written as `"p20"` instead of guessing hPa values. A small compiler turns this program into a **standard XGBoost model file**, which loads in stock XGBoost like any trained model.
 
-![Rain forecaster results](img/1_rain_hero.png)
+![Rain forecaster results](https://raw.githubusercontent.com/IyadhKhalfallah/weight-space-programming/main/article/img/1_rain_hero.png)
 
 - **Written with zero labels: AUC 0.809.**
 - XGBoost trained on 2.5 years (9,110 labelled days): 0.839.
@@ -44,7 +44,7 @@ The only data it was allowed to look at was **unlabelled**: feature percentiles,
 
 The hand-written model recovers about **75% of the gain** that 2.5 years of training gives over persistence, and it beats a model trained on two months of data.
 
-![ROC curves](img/2_rain_roc.png)
+![ROC curves](https://raw.githubusercontent.com/IyadhKhalfallah/weight-space-programming/main/article/img/2_rain_roc.png)
 
 In a second round, I let the AI read 2024–25 labels (diagnostics only, still no training), revise its trees, and validate on Jan–Jun 2026 before a single final test run. That moved AUC from 0.809 to 0.815 and log-loss from 0.493 to 0.479. It's a modest gain, and along the way I caught a bug in my own analysis script (averaging log-odds where I meant probabilities), which led to the calibration fix.
 
@@ -65,7 +65,7 @@ Each experiment followed the same loop:
 3. **Test before/after** on new data, per segment, and flag any regression.
 4. **Commit** it as a reversible patch: the base model is never modified, and the current model = base + active patches.
 
-![Before and after edits](img/3_fixes.png)
+![Before and after edits](https://raw.githubusercontent.com/IyadhKhalfallah/weight-space-programming/main/article/img/3_fixes.png)
 
 *(The fraud, router and delivery-time models were trained on synthetic data I generated with a realistic flaw built in, so the "right answer" is known.)*
 
@@ -89,7 +89,7 @@ Each experiment followed the same loop:
 
 ## 3. Where it breaks
 
-![Where it works](img/4_verdict.png)
+![Where it works](https://raw.githubusercontent.com/IyadhKhalfallah/weight-space-programming/main/article/img/4_verdict.png)
 
 ### You can't edit in a skill the model never learned
 
@@ -103,7 +103,7 @@ The MIT post's showcase edit makes Qwen3.5-0.8B stop overthinking (end its reaso
 
 Then I tried to find such an edit myself, with a 0.8B model on a laptop. I found real directions linked to stopping, and an automated search over layers picked the three that moved the stop probability most on my search set. On a held-out measurement, my edit moved it **1.2×**. Effectively nothing.
 
-![LLM result](img/5_llm.png)
+![LLM result](https://raw.githubusercontent.com/IyadhKhalfallah/weight-space-programming/main/article/img/5_llm.png)
 
 This matches what others replicating the paper report: diagnosis transfers, edits often don't. The MIT result used a frontier model doing the editing; doing it reliably is still an open problem.
 
@@ -122,6 +122,6 @@ The bigger idea is that models stop being compiled blobs you re-cook with more d
 
 ---
 
-*The tooling: a small CLI that imports PyTorch, scikit-learn and XGBoost models, exposes inspection tools (feature effects, unit activity, weights), applies JSON edit ops (`shrink_input_toward`, `project_out`, `add_rule`…), runs before/after evals per slice, and exports back to PyTorch (`torch.export`), scikit-learn or XGBoost. Code: [link].*
+*The tooling: a small CLI that imports PyTorch, scikit-learn and XGBoost models, exposes inspection tools (feature effects, unit activity, weights), applies JSON edit ops (`shrink_input_toward`, `project_out`, `add_rule`…), runs before/after evals per slice, and exports back to PyTorch (`torch.export`), scikit-learn or XGBoost. Code: [https://github.com/IyadhKhalfallah/weight-space-programming](https://github.com/IyadhKhalfallah/weight-space-programming).*
 
 *If you have a model with a flaw you'd like to try this on, I'd love to hear from you.*
