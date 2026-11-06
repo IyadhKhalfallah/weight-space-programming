@@ -3,7 +3,7 @@ title: I tried "weight-space programming" on 6 kinds of models. Here's where it 
 published: false
 description: An AI wrote a rain forecaster with zero training labels, tested on weather after its knowledge cutoff. Plus fixing models by editing weights, and where it fails.
 tags: machinelearning, ai, python, xgboost
-cover_image: https://raw.githubusercontent.com/IyadhKhalfallah/weight-space-programming/main/article/img/1_rain_hero.png
+cover_image: https://raw.githubusercontent.com/IyadhKhalfallah/weight-space-programming/main/article/img/0_cover.png
 ---
 
 A few days ago, MIT CSAIL researchers published [Sparks of Weight-Space Programming](https://rikiyat.github.io/blog/weight-space-programming/): a frontier model that reads a neural network's weights and edits them directly, with no gradient descent, to change its behavior.
