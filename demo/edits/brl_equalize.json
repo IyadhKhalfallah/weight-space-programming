@@ -1,0 +1,1 @@
+{"op": "set_input_like", "feature": "cur_BRL", "like": ["cur_USD", "cur_EUR", "cur_GBP", "cur_JPY"]}

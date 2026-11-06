@@ -1,0 +1,4 @@
+# Only for the LLM experiments in llm/ (Apple Silicon, MLX)
+mlx>=0.30
+mlx-lm>=0.32
+datasets

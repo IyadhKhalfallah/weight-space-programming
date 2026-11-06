@@ -1,0 +1,6 @@
+[
+ {"op": "add_input", "feature": "gift_card"},
+ {"op": "add_rule", "name": "gift card over $500",
+  "conditions": [{"feature": "gift_card", "op": "==1"}, {"feature": "log_amount", "op": ">", "value": 2.2146}],
+  "effect": 3.25}
+]

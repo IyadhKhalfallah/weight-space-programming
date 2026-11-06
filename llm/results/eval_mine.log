@@ -1,0 +1,5 @@
+  8/32 done, peak mem 3.4 GB
+  16/32 done, peak mem 3.4 GB
+  24/32 done, peak mem 3.4 GB
+  32/32 done, peak mem 3.4 GB
+models/mine: acc 5/32=15.62%  hit_limit 27/32  tokens 248324  160 tok/s  25.9 min

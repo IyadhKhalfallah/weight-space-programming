@@ -1,0 +1,280 @@
+{
+ "task": "v3 = v2 recalibrated after the corrected 2024-25 diagnosis: leaves x0.85 (correlated signals stacked in winter storms), prior -0.55 -> -0.85, summer-convection tree +0.4 -> +0.15.",
+ "prior_logodds": -0.85,
+ "trees": [
+  {
+   "why": "absolute pressure is the strongest single signal (rain rate 65% -> 13% across quintiles); graded",
+   "if": [
+    "pressure",
+    "<",
+    "p20"
+   ],
+   "then": 0.552,
+   "else": {
+    "if": [
+     "pressure",
+     "<",
+     "p40"
+    ],
+    "then": 0.212,
+    "else": {
+     "if": [
+      "pressure",
+      "<",
+      "p60"
+     ],
+     "then": 0.0,
+     "else": {
+      "if": [
+       "pressure",
+       "<",
+       "p80"
+      ],
+      "then": -0.255,
+      "else": -0.637
+     }
+    }
+   }
+  },
+  {
+   "why": "a sharp 24h fall adds risk; rising pressure does NOT make tomorrow drier (31%, flat)",
+   "if": [
+    "pressure_change_24h",
+    "<",
+    "p20"
+   ],
+   "then": 0.383,
+   "else": -0.043
+  },
+  {
+   "why": "falling in the last 6h (despite the evening pressure tide) = front arriving now",
+   "if": [
+    "pressure_change_6h",
+    "<",
+    "p20"
+   ],
+   "then": 0.34,
+   "else": {
+    "if": [
+     "pressure_change_6h",
+     ">",
+     "p60"
+    ],
+    "then": -0.085,
+    "else": 0.0
+   }
+  },
+  {
+   "why": "persistence, graded by how much it rained today",
+   "if": [
+    "rain_today",
+    ">",
+    3.4
+   ],
+   "then": 0.51,
+   "else": {
+    "if": [
+     "rain_today",
+     ">",
+     0.7
+    ],
+    "then": 0.297,
+    "else": {
+     "if": [
+      "rain_today",
+      ">",
+      0.05
+     ],
+     "then": -0.085,
+     "else": -0.17
+    }
+   }
+  },
+  {
+   "why": "rain still falling in the evening (67% rain tomorrow)",
+   "if": [
+    "rain_evening",
+    ">",
+    0.2
+   ],
+   "then": 0.383,
+   "else": 0.0
+  },
+  {
+   "why": "evening cloud, strongly graded (11% -> 55%)",
+   "if": [
+    "cloud_evening",
+    "<",
+    "p20"
+   ],
+   "then": -0.68,
+   "else": {
+    "if": [
+     "cloud_evening",
+     "<",
+     "p40"
+    ],
+    "then": -0.17,
+    "else": {
+     "if": [
+      "cloud_evening",
+      ">",
+      "p80"
+     ],
+     "then": 0.297,
+     "else": 0.128
+    }
+   }
+  },
+  {
+   "why": "clear day overall (overlaps evening cloud, small weight)",
+   "if": [
+    "cloud",
+    "<",
+    "p20"
+   ],
+   "then": -0.297,
+   "else": {
+    "if": [
+     "cloud",
+     ">",
+     "p80"
+    ],
+    "then": 0.085,
+    "else": 0.0
+   }
+  },
+  {
+   "why": "dry evening air is a dry signal; very humid air adds nothing extra (plateau)",
+   "if": [
+    "humidity_evening",
+    "<",
+    "p20"
+   ],
+   "then": -0.383,
+   "else": 0.043
+  },
+  {
+   "why": "large dew-point spread = dry air mass",
+   "if": [
+    "dewpoint_spread_evening",
+    ">",
+    "p80"
+   ],
+   "then": -0.255,
+   "else": 0.0
+  },
+  {
+   "why": "wind speed, graded (25% -> 53%)",
+   "if": [
+    "wind_speed_evening",
+    "<",
+    "p20"
+   ],
+   "then": -0.17,
+   "else": {
+    "if": [
+     "wind_speed_evening",
+     ">",
+     "p80"
+    ],
+    "then": 0.383,
+    "else": {
+     "if": [
+      "wind_speed_evening",
+      ">",
+      "p60"
+     ],
+     "then": 0.128,
+     "else": 0.0
+    }
+   }
+  },
+  {
+   "why": "southerly flow brings moist air (47% vs 21% northerly)",
+   "if": [
+    "wind_from_south",
+    ">",
+    "p60"
+   ],
+   "then": 0.255,
+   "else": {
+    "if": [
+     "wind_from_south",
+     "<",
+     "p20"
+    ],
+    "then": -0.297,
+    "else": 0.0
+   }
+  },
+  {
+   "why": "Mediterranean summer: driest in Jul-Aug, partly dry in Jun and Sep",
+   "if": [
+    "lat",
+    "<",
+    43
+   ],
+   "then": {
+    "if": [
+     "month",
+     ">",
+     6.5
+    ],
+    "then": {
+     "if": [
+      "month",
+      "<",
+      8.5
+     ],
+     "then": -0.85,
+     "else": {
+      "if": [
+       "month",
+       "<",
+       9.5
+      ],
+      "then": -0.34,
+      "else": 0.0
+     }
+    },
+    "else": {
+     "if": [
+      "month",
+      ">",
+      5.5
+     ],
+     "then": -0.34,
+     "else": 0.0
+    }
+   },
+   "else": 0.0
+  },
+  {
+   "why": "northern summer convection: warm and humid evenings (49% observed vs 32% predicted by v1)",
+   "if": [
+    "lat",
+    ">",
+    43
+   ],
+   "then": {
+    "if": [
+     "temp",
+     ">",
+     18
+    ],
+    "then": {
+     "if": [
+      "humidity_evening",
+      ">",
+      75
+     ],
+     "then": 0.15,
+     "else": 0.0
+    },
+    "else": 0.0
+   },
+   "else": 0.0
+  }
+ ]
+}

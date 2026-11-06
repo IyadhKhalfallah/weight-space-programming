@@ -1,0 +1,1 @@
+{"op": "shrink_input_toward", "feature": "cur_BRL", "like": ["cur_USD", "cur_EUR", "cur_GBP", "cur_JPY"], "keep": 0.07}

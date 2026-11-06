@@ -1,0 +1,3 @@
+discovery runs: 14/16 never finished in 4096 tokens
+layer separation (late vs early), top 6: [(13, 4.44), (15, 4.31), (16, 4.16), (3, 3.9), (17, 3.78), (21, 3.68)]
+edited layers: {13: 4.44, 15: 4.31} -> models/mine

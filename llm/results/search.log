@@ -1,0 +1,113 @@
+using 6 rambling runs
+base: stop score -13.730  nll 0.493   (20s)
+96 candidates proposed (33s)
+  [  1/96] layer  0 diffmean  Δstop -0.106  Δnll +0.0031
+  [  2/96] layer  0 pc0       Δstop +0.713  Δnll +0.0039
+  [  3/96] layer  0 pc1       Δstop +0.159  Δnll +0.0008
+  [  4/96] layer  0 pc2       Δstop +0.077  Δnll +0.0006
+  [  5/96] layer  1 diffmean  Δstop +0.563  Δnll +0.0031
+  [  6/96] layer  1 pc0       Δstop +0.605  Δnll +0.0072
+  [  7/96] layer  1 pc1       Δstop +0.003  Δnll +0.0007
+  [  8/96] layer  1 pc2       Δstop +0.107  Δnll +0.0005
+  [  9/96] layer  2 diffmean  Δstop +0.746  Δnll +0.0052
+  [ 10/96] layer  2 pc0       Δstop +0.937  Δnll +0.0119
+  [ 11/96] layer  2 pc1       Δstop +0.068  Δnll +0.0003
+  [ 12/96] layer  2 pc2       Δstop -0.168  Δnll -0.0000
+  [ 13/96] layer  3 diffmean  Δstop -0.103  Δnll +0.0001
+  [ 14/96] layer  3 pc0       Δstop +0.041  Δnll +0.0026
+  [ 15/96] layer  3 pc1       Δstop -0.017  Δnll +0.0011
+  [ 16/96] layer  3 pc2       Δstop -0.174  Δnll -0.0002
+  [ 17/96] layer  4 diffmean  Δstop +0.161  Δnll +0.0004
+  [ 18/96] layer  4 pc0       Δstop +0.213  Δnll +0.0045
+  [ 19/96] layer  4 pc1       Δstop -0.105  Δnll +0.0010
+  [ 20/96] layer  4 pc2       Δstop -0.006  Δnll +0.0008
+  [ 21/96] layer  5 diffmean  Δstop -0.117  Δnll -0.0002
+  [ 22/96] layer  5 pc0       Δstop +0.129  Δnll +0.0033
+  [ 23/96] layer  5 pc1       Δstop +0.005  Δnll +0.0012
+  [ 24/96] layer  5 pc2       Δstop -0.091  Δnll +0.0010
+  [ 25/96] layer  6 diffmean  Δstop +0.118  Δnll -0.0003
+  [ 26/96] layer  6 pc0       Δstop +0.096  Δnll +0.0079
+  [ 27/96] layer  6 pc1       Δstop -0.022  Δnll +0.0036
+  [ 28/96] layer  6 pc2       Δstop -0.088  Δnll +0.0034
+  [ 29/96] layer  7 diffmean  Δstop -0.102  Δnll +0.0004
+  [ 30/96] layer  7 pc0       Δstop +0.074  Δnll +0.0051
+  [ 31/96] layer  7 pc1       Δstop -0.130  Δnll +0.0004
+  [ 32/96] layer  7 pc2       Δstop +0.007  Δnll +0.0006
+  [ 33/96] layer  8 diffmean  Δstop -0.118  Δnll +0.0008
+  [ 34/96] layer  8 pc0       Δstop -0.040  Δnll +0.0043
+  [ 35/96] layer  8 pc1       Δstop -0.002  Δnll +0.0014
+  [ 36/96] layer  8 pc2       Δstop -0.024  Δnll +0.0004
+  [ 37/96] layer  9 diffmean  Δstop -0.122  Δnll +0.0003
+  [ 38/96] layer  9 pc0       Δstop +0.068  Δnll +0.0020
+  [ 39/96] layer  9 pc1       Δstop -0.100  Δnll +0.0012
+  [ 40/96] layer  9 pc2       Δstop +0.007  Δnll +0.0029
+  [ 41/96] layer 10 diffmean  Δstop +0.507  Δnll +0.0046
+  [ 42/96] layer 10 pc0       Δstop +0.264  Δnll +0.0100
+  [ 43/96] layer 10 pc1       Δstop +0.023  Δnll +0.0032
+  [ 44/96] layer 10 pc2       Δstop -0.176  Δnll +0.0027
+  [ 45/96] layer 11 diffmean  Δstop -0.069  Δnll -0.0004
+  [ 46/96] layer 11 pc0       Δstop +0.017  Δnll +0.0042
+  [ 47/96] layer 11 pc1       Δstop +0.174  Δnll +0.0058
+  [ 48/96] layer 11 pc2       Δstop -0.096  Δnll +0.0010
+  [ 49/96] layer 12 diffmean  Δstop +0.063  Δnll +0.0020
+  [ 50/96] layer 12 pc0       Δstop +0.039  Δnll +0.0058
+  [ 51/96] layer 12 pc1       Δstop -0.158  Δnll +0.0031
+  [ 52/96] layer 12 pc2       Δstop +0.013  Δnll +0.0018
+  [ 53/96] layer 13 diffmean  Δstop +0.061  Δnll +0.0011
+  [ 54/96] layer 13 pc0       Δstop +0.512  Δnll +0.0107
+  [ 55/96] layer 13 pc1       Δstop +0.300  Δnll +0.0019
+  [ 56/96] layer 13 pc2       Δstop -0.049  Δnll +0.0008
+  [ 57/96] layer 14 diffmean  Δstop +0.380  Δnll +0.0027
+  [ 58/96] layer 14 pc0       Δstop +0.656  Δnll +0.0075
+  [ 59/96] layer 14 pc1       Δstop +0.183  Δnll +0.0020
+  [ 60/96] layer 14 pc2       Δstop -0.038  Δnll +0.0053
+  [ 61/96] layer 15 diffmean  Δstop +0.117  Δnll +0.0025
+  [ 62/96] layer 15 pc0       Δstop +0.875  Δnll +0.0101
+  [ 63/96] layer 15 pc1       Δstop +0.177  Δnll +0.0025
+  [ 64/96] layer 15 pc2       Δstop +0.022  Δnll +0.0020
+  [ 65/96] layer 16 diffmean  Δstop -0.062  Δnll +0.0006
+  [ 66/96] layer 16 pc0       Δstop +0.370  Δnll +0.0056
+  [ 67/96] layer 16 pc1       Δstop +0.060  Δnll +0.0012
+  [ 68/96] layer 16 pc2       Δstop -0.136  Δnll +0.0011
+  [ 69/96] layer 17 diffmean  Δstop -0.027  Δnll -0.0004
+  [ 70/96] layer 17 pc0       Δstop +0.081  Δnll +0.0067
+  [ 71/96] layer 17 pc1       Δstop -0.193  Δnll +0.0001
+  [ 72/96] layer 17 pc2       Δstop -0.110  Δnll -0.0003
+  [ 73/96] layer 18 diffmean  Δstop +0.064  Δnll +0.0003
+  [ 74/96] layer 18 pc0       Δstop +0.220  Δnll +0.0057
+  [ 75/96] layer 18 pc1       Δstop -0.049  Δnll +0.0011
+  [ 76/96] layer 18 pc2       Δstop -0.288  Δnll -0.0000
+  [ 77/96] layer 19 diffmean  Δstop -0.187  Δnll +0.0007
+  [ 78/96] layer 19 pc0       Δstop +0.284  Δnll +0.0182
+  [ 79/96] layer 19 pc1       Δstop -0.028  Δnll +0.0013
+  [ 80/96] layer 19 pc2       Δstop -0.190  Δnll +0.0009
+  [ 81/96] layer 20 diffmean  Δstop -0.119  Δnll +0.0002
+  [ 82/96] layer 20 pc0       Δstop +0.500  Δnll +0.0047
+  [ 83/96] layer 20 pc1       Δstop -0.057  Δnll -0.0002
+  [ 84/96] layer 20 pc2       Δstop -0.598  Δnll -0.0004
+  [ 85/96] layer 21 diffmean  Δstop +0.007  Δnll +0.0002
+  [ 86/96] layer 21 pc0       Δstop +0.685  Δnll +0.0110
+  [ 87/96] layer 21 pc1       Δstop +0.066  Δnll -0.0001
+  [ 88/96] layer 21 pc2       Δstop -0.303  Δnll +0.0002
+  [ 89/96] layer 22 diffmean  Δstop -0.083  Δnll -0.0025
+  [ 90/96] layer 22 pc0       Δstop +0.153  Δnll +0.0386
+  [ 91/96] layer 22 pc1       Δstop +0.165  Δnll +0.0039
+  [ 92/96] layer 22 pc2       Δstop -0.888  Δnll -0.0007
+  [ 93/96] layer 23 diffmean  Δstop +0.030  Δnll +0.0261
+  [ 94/96] layer 23 pc0       Δstop +1.173  Δnll +0.0762
+  [ 95/96] layer 23 pc1       Δstop -0.031  Δnll +0.0137
+  [ 96/96] layer 23 pc2       Δstop -0.997  Δnll +0.0115
+
+top 8 safe candidates:
+  layer  2 pc0      Δstop +0.937  Δnll +0.0119
+  layer 15 pc0      Δstop +0.875  Δnll +0.0101
+  layer  2 diffmean Δstop +0.746  Δnll +0.0052
+  layer  0 pc0      Δstop +0.713  Δnll +0.0039
+  layer 21 pc0      Δstop +0.685  Δnll +0.0110
+  layer 14 pc0      Δstop +0.656  Δnll +0.0075
+  layer  1 pc0      Δstop +0.605  Δnll +0.0072
+  layer  1 diffmean Δstop +0.563  Δnll +0.0031
+  try + layer 15 pc0: Δstop +1.524 (gain +0.587)  Δnll +0.0211
+  try + layer 0 pc0: Δstop +2.370 (gain +0.846)  Δnll +0.0272
+CHOSEN: [(2, 'pc0'), (15, 'pc0'), (0, 'pc0')] Δstop +2.370
+wrote models/loop: 3 rank-1 edits (11010048 weights touched)   total 1762s

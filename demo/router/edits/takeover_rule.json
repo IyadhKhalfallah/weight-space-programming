@@ -1,0 +1,1 @@
+[{"op":"add_rule","name":"account takeover -> security","target":"security","conditions":[{"feature":"suspicious_login","op":"==1"},{"feature":"mentions_payment","op":"==1"}],"effect":6}]

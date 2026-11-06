@@ -1,0 +1,20 @@
+{
+ "task": "P(malignant) for a breast tumour from nucleus measurements. Written WITHOUT labels: thresholds are percentiles of the unlabeled training features; leaf values are my judgement in log-odds.",
+ "prior_logodds": -0.5,
+ "trees": [
+  {"why": "irregular boundary in the worst cells is the strongest sign of malignancy",
+   "if": ["worst concave points", ">", "p63"], "then": 1.2, "else": -1.2},
+  {"why": "large nuclei; area stands in for radius/perimeter (correlated, so counted once at full weight)",
+   "if": ["worst area", ">", "p63"], "then": 1.0, "else": -1.0},
+  {"why": "same size signal from another view, half weight to avoid double counting",
+   "if": ["worst perimeter", ">", "p63"], "then": 0.5, "else": -0.5},
+  {"why": "concavity on average across cells, not just the worst",
+   "if": ["mean concavity", ">", "p63"], "then": 0.8, "else": -0.8},
+  {"why": "rougher chromatin texture",
+   "if": ["worst texture", ">", "p60"], "then": 0.5, "else": -0.5},
+  {"why": "big AND irregular together is much more suspicious; small AND regular is reassuring",
+   "if": ["worst radius", ">", "p50"],
+   "then": {"if": ["worst concavity", ">", "p50"], "then": 0.8, "else": 0.0},
+   "else": {"if": ["worst concavity", ">", "p50"], "then": 0.0, "else": -0.8}}
+ ]
+}

@@ -1,0 +1,29 @@
+[
+ {
+  "op": "add_rule",
+  "name": "zone D road reopened",
+  "conditions": [
+   {
+    "feature": "zone_D",
+    "op": "==1"
+   }
+  ],
+  "effect": -11.19
+ },
+ {
+  "op": "add_rule",
+  "name": "zone A construction, long trips",
+  "conditions": [
+   {
+    "feature": "zone_A",
+    "op": "==1"
+   },
+   {
+    "feature": "distance_km",
+    "op": ">",
+    "value": 8
+   }
+  ],
+  "effect": 11.31
+ }
+]

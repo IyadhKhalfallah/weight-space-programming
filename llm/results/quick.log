@@ -1,0 +1,2 @@
+models/Qwen3.5-0.8B: acc 0/8=0.00%  hit_limit 8/8  tokens 32768  164 tok/s  3.3 min
+models/loop: acc 0/8=0.00%  hit_limit 8/8  tokens 32768  169 tok/s  3.2 min

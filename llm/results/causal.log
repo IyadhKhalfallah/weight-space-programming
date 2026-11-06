@@ -1,0 +1,4 @@
+</think> id 248069 | restart token ids [13428, 13784, 22041, 32645, 37201, 45847, 50821, 77264, 85152, 88842]
+Qwen3.5-0.8B                                  mean P(</think>) 1.09e-05   positions with P(</think>)>1%: 0.01%   mean P(restart) 0.007
+Qwen3.5-0.8B-weight-space-programming         mean P(</think>) 3.12e-04   positions with P(</think>)>1%: 0.61%   mean P(restart) 0.005
+mine                                          mean P(</think>) 1.28e-05   positions with P(</think>)>1%: 0.01%   mean P(restart) 0.007
